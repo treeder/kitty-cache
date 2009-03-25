@@ -13,7 +13,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * Date: Mar 15, 2009
  * Time: 8:42:01 PM
  */
-public class KittyCache {
+public class KittyCache implements KCache {
 
     private Map<String, Object[]> cache;
     /**
@@ -34,7 +34,6 @@ public class KittyCache {
 
     public void put(String key, Object val, Integer seconds_to_store) {
         seconds_to_store = seconds_to_store != null ? seconds_to_store : 9999999;
-//#        puts 'seconds=' + seconds_to_store.to_s
         cache.put(key, new Object[]{System.currentTimeMillis() + seconds_to_store, val});
         queue.add(key);
         size.incrementAndGet();
@@ -51,10 +50,8 @@ public class KittyCache {
         if (cache.containsKey(key)) {
             int expires = (Integer) cache.get(key)[0];
             if (expires - System.currentTimeMillis() > 0) {
-//#            puts 'returning from cache ' + @cache[key][1].inspect
                 return cache.get(key)[1];
             } else {
-//#            puts 'expired=' + key + ' at ' + expires.to_s + ' and now=' + Time.now.to_s
                 remove(key);
             }
         }
