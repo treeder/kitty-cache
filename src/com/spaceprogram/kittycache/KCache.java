@@ -1,4 +1,4 @@
-package com.spaceprogram.kittycache;
+package com.appoxy.kittycache;
 
 /**
  * User: treeder
@@ -6,5 +6,5 @@ package com.spaceprogram.kittycache;
  * Time: 7:40:14 PM
  */
 public interface KCache {
-    void put(String key, Object value, Integer secondsToLive);
+    void put(Object key, Object value, Integer secondsToLive);
 }

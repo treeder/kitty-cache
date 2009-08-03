@@ -1,4 +1,4 @@
-package com.spaceprogram.kittycache;
+package com.appoxy.kittycache;
 
 import net.sf.ehcache.Cache;
 import net.sf.ehcache.CacheManager;
@@ -50,25 +50,25 @@ public class PerformanceTests {
 
     @Test
     public void test10000() {
-        System.out.println("Test 10,000");
+        System.out.println("Test 10,000 Puts");
         doPut(10000);
     }
 
     @Test
     public void test100000() {
-        System.out.println("Test 100,000");
+        System.out.println("Test 100,000 Puts");
         doPut(100000);
     }
 
     @Test
     public void test1000000() {
-        System.out.println("Test 1,000,000");
+        System.out.println("Test 1,000,000 Puts");
         doPut(1000000);
     }
 
     @Test
     public void testConcurrent() throws ExecutionException, InterruptedException {
-        System.out.println("Test concurrent");
+        System.out.println("Test 100 Thread Concurrency and 1,000,000 Puts");
         ExecutorService executorService = Executors.newFixedThreadPool(100);
 
         List<Future<Long>> futures = new ArrayList<Future<Long>>();
@@ -80,7 +80,7 @@ public class PerformanceTests {
         for (Future<Long> future : futures) {
             totalDuration += future.get();
         }
-        System.out.println("ehcache duration=" + totalDuration);
+        System.out.println("ehcache=" + totalDuration);
 
         futures = new ArrayList<Future<Long>>();
         for(int i = 0; i < 1000; i++){
@@ -91,7 +91,7 @@ public class PerformanceTests {
         for (Future<Long> future : futures) {
             totalDuration += future.get();
         }
-        System.out.println("kittycache duration=" + totalDuration);
+        System.out.println("kittycache=" + totalDuration);
 
     }
 

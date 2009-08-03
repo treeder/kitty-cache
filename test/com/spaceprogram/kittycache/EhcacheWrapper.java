@@ -1,4 +1,4 @@
-package com.spaceprogram.kittycache;
+package com.appoxy.kittycache;
 
 import net.sf.ehcache.Cache;
 import net.sf.ehcache.Element;
@@ -16,7 +16,7 @@ public class EhcacheWrapper implements KCache {
         this.ehcache = ehcache;
     }
 
-    public void put(String key, Object value, Integer secondsToLive) {
+    public void put(Object key, Object value, Integer secondsToLive) {
         ehcache.put(new Element(key, value));
     }
 

@@ -1,4 +1,4 @@
-package com.spaceprogram.kittycache;
+package com.appoxy.kittycache;
 
 
 import java.util.concurrent.Callable;
