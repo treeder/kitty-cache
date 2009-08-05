@@ -69,14 +69,14 @@ public class KittyCache implements KCache {
 
     /** Returns boolean to stay compatible with ehcache and memcached.
      *
-     * @see #removeGet for alternate version.
+     * @see #removeAndGet for alternate version.
      *
      */
     public boolean remove(Object key) {
-        return removeGet(key) != null;
+        return removeAndGet(key) != null;
     }
 
-    public Object removeGet(Object key){
+    public Object removeAndGet(Object key){
         Object[] entry = cache.remove(key);
 //        System.out.println("entry=" + entry);
         if (entry != null) {
