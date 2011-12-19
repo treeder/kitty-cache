@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.spaceprogram</groupId>
 	<artifactId>KittyCache</artifactId>
-	<version>1.0</version>
+	<version>1.2</version>
 	<name>KittyCache</name>
 	<description>Simple In-memory Cache solution based on Java Concurrent Package</description>
 	<scm>
@@ -14,10 +14,12 @@
 	</issueManagement>
 	<developers>
 		<developer>
-			treeder
+			<name>Travis Reeder</name>
+			<email>treeder@gmail.com</email>
 		</developer>
 		<developer>
-			innovativeravi
+			<name>Ravi Madabhushi</name>
+			<email>innovativeravi@gmail.com</email>
 		</developer>
 	</developers>
 </project>
