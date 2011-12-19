@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.spaceprogram</groupId>
+	<artifactId>KittyCache</artifactId>
+	<version>1.0</version>
+	<name>KittyCache</name>
+	<description>Simple In-memory Cache solution based on Java Concurrent Package</description>
+	<scm>
+		<url>http://kitty-cache.googlecode.com/svn/trunk</url>
+	</scm>
+	<issueManagement>
+		<url>http://code.google.com/p/kitty-cache/issues/list</url>
+	</issueManagement>
+	<developers>
+		<developer>
+			treeder
+		</developer>
+		<developer>
+			innovativeravi
+		</developer>
+	</developers>
+</project>
